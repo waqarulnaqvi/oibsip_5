@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#414B4D"
+    android:orientation="vertical"
+    android:visibility="visible"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/green"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme" />
+
+
+    <TextView
+        android:id="@+id/timetv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingTop="100sp"
+        android:paddingBottom="100sp"
+        android:text="00:00:00:00"
+        android:textColor="#F3EAEA"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="200dp">
+
+
+        <TextView
+            android:id="@+id/resetbtn"
+            android:layout_width="87dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_weight="1"
+            android:drawableRight="@drawable/baseline_refresh_24"
+            android:onClick="resetbt"
+            android:paddingRight="14dp"
+            android:text="TextView"
+            android:visibility="invisible" />
+
+
+        <TextView
+            android:id="@+id/startbtn"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+
+            android:drawableRight="@drawable/baseline_play_arrow_24"
+            android:onClick="startbt"
+            android:paddingLeft="10dp"
+            android:paddingRight="8dp" />
+
+        <TextView
+            android:id="@+id/stopbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/baseline_pause_circle_24"
+            android:onClick="stopbt"
+            android:paddingLeft="14dp"
+            android:text="stop"
+            android:visibility="invisible" />
+
+<!--        5 18-->
+    </LinearLayout>
+
+
+</LinearLayout>
